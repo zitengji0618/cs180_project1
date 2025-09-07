@@ -1,0 +1,697 @@
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=utf-8"/><title>Images of the Russian Empire: Colorizing the Prokudin-Gorskii photo collection</title><style>
+/* cspell:disable-file */
+/* webkit printing magic: print all background colors */
+html {
+	-webkit-print-color-adjust: exact;
+}
+* {
+	box-sizing: border-box;
+	-webkit-print-color-adjust: exact;
+}
+
+html,
+body {
+	margin: 0;
+	padding: 0;
+}
+@media only screen {
+	body {
+		margin: 2em auto;
+		max-width: 900px;
+		color: rgb(55, 53, 47);
+	}
+}
+
+body {
+	line-height: 1.5;
+	white-space: pre-wrap;
+}
+
+a,
+a.visited {
+	color: inherit;
+	text-decoration: underline;
+}
+
+.pdf-relative-link-path {
+	font-size: 80%;
+	color: #444;
+}
+
+h1,
+h2,
+h3 {
+	letter-spacing: -0.01em;
+	line-height: 1.2;
+	font-weight: 600;
+	margin-bottom: 0;
+}
+
+.page-title {
+	font-size: 2.5rem;
+	font-weight: 700;
+	margin-top: 0;
+	margin-bottom: 0.75em;
+}
+
+h1 {
+	font-size: 1.875rem;
+	margin-top: 1.875rem;
+}
+
+h2 {
+	font-size: 1.5rem;
+	margin-top: 1.5rem;
+}
+
+h3 {
+	font-size: 1.25rem;
+	margin-top: 1.25rem;
+}
+
+.source {
+	border: 1px solid #ddd;
+	border-radius: 3px;
+	padding: 1.5em;
+	word-break: break-all;
+}
+
+.callout {
+	border-radius: 3px;
+	padding: 1rem;
+}
+
+figure {
+	margin: 1.25em 0;
+	page-break-inside: avoid;
+}
+
+figcaption {
+	opacity: 0.5;
+	font-size: 85%;
+	margin-top: 0.5em;
+}
+
+mark {
+	background-color: transparent;
+}
+
+.indented {
+	padding-left: 1.5em;
+}
+
+hr {
+	background: transparent;
+	display: block;
+	width: 100%;
+	height: 1px;
+	visibility: visible;
+	border: none;
+	border-bottom: 1px solid rgba(55, 53, 47, 0.09);
+}
+
+img {
+	max-width: 100%;
+}
+
+@media only print {
+	img {
+		max-height: 100vh;
+		object-fit: contain;
+	}
+}
+
+@page {
+	margin: 1in;
+}
+
+.collection-content {
+	font-size: 0.875rem;
+}
+
+.collection-content td {
+	white-space: pre-wrap;
+	word-break: break-word;
+}
+
+.column-list {
+	display: flex;
+	justify-content: space-between;
+}
+
+.column {
+	padding: 0 1em;
+}
+
+.column:first-child {
+	padding-left: 0;
+}
+
+.column:last-child {
+	padding-right: 0;
+}
+
+.table_of_contents-item {
+	display: block;
+	font-size: 0.875rem;
+	line-height: 1.3;
+	padding: 0.125rem;
+}
+
+.table_of_contents-indent-1 {
+	margin-left: 1.5rem;
+}
+
+.table_of_contents-indent-2 {
+	margin-left: 3rem;
+}
+
+.table_of_contents-indent-3 {
+	margin-left: 4.5rem;
+}
+
+.table_of_contents-link {
+	text-decoration: none;
+	opacity: 0.7;
+	border-bottom: 1px solid rgba(55, 53, 47, 0.18);
+}
+
+table,
+th,
+td {
+	border: 1px solid rgba(55, 53, 47, 0.09);
+	border-collapse: collapse;
+}
+
+table {
+	border-left: none;
+	border-right: none;
+}
+
+th,
+td {
+	font-weight: normal;
+	padding: 0.25em 0.5em;
+	line-height: 1.5;
+	min-height: 1.5em;
+	text-align: left;
+}
+
+th {
+	color: rgba(55, 53, 47, 0.6);
+}
+
+ol,
+ul {
+	margin: 0;
+	margin-block-start: 0.6em;
+	margin-block-end: 0.6em;
+}
+
+li > ol:first-child,
+li > ul:first-child {
+	margin-block-start: 0.6em;
+}
+
+ul > li {
+	list-style: disc;
+}
+
+ul.to-do-list {
+	padding-inline-start: 0;
+}
+
+ul.to-do-list > li {
+	list-style: none;
+}
+
+.to-do-children-checked {
+	text-decoration: line-through;
+	opacity: 0.375;
+}
+
+ul.toggle > li {
+	list-style: none;
+}
+
+ul {
+	padding-inline-start: 1.7em;
+}
+
+ul > li {
+	padding-left: 0.1em;
+}
+
+ol {
+	padding-inline-start: 1.6em;
+}
+
+ol > li {
+	padding-left: 0.2em;
+}
+
+.mono ol {
+	padding-inline-start: 2em;
+}
+
+.mono ol > li {
+	text-indent: -0.4em;
+}
+
+.toggle {
+	padding-inline-start: 0em;
+	list-style-type: none;
+}
+
+/* Indent toggle children */
+.toggle > li > details {
+	padding-left: 1.7em;
+}
+
+.toggle > li > details > summary {
+	margin-left: -1.1em;
+}
+
+.selected-value {
+	display: inline-block;
+	padding: 0 0.5em;
+	background: rgba(206, 205, 202, 0.5);
+	border-radius: 3px;
+	margin-right: 0.5em;
+	margin-top: 0.3em;
+	margin-bottom: 0.3em;
+	white-space: nowrap;
+}
+
+.collection-title {
+	display: inline-block;
+	margin-right: 1em;
+}
+
+.page-description {
+	margin-bottom: 2em;
+}
+
+.simple-table {
+	margin-top: 1em;
+	font-size: 0.875rem;
+	empty-cells: show;
+}
+.simple-table td {
+	height: 29px;
+	min-width: 120px;
+}
+
+.simple-table th {
+	height: 29px;
+	min-width: 120px;
+}
+
+.simple-table-header-color {
+	background: rgb(247, 246, 243);
+	color: black;
+}
+.simple-table-header {
+	font-weight: 500;
+}
+
+time {
+	opacity: 0.5;
+}
+
+.icon {
+	display: inline-block;
+	max-width: 1.2em;
+	max-height: 1.2em;
+	text-decoration: none;
+	vertical-align: text-bottom;
+	margin-right: 0.5em;
+}
+
+img.icon {
+	border-radius: 3px;
+}
+
+.user-icon {
+	width: 1.5em;
+	height: 1.5em;
+	border-radius: 100%;
+	margin-right: 0.5rem;
+}
+
+.user-icon-inner {
+	font-size: 0.8em;
+}
+
+.text-icon {
+	border: 1px solid #000;
+	text-align: center;
+}
+
+.page-cover-image {
+	display: block;
+	object-fit: cover;
+	width: 100%;
+	max-height: 30vh;
+}
+
+.page-header-icon {
+	font-size: 3rem;
+	margin-bottom: 1rem;
+}
+
+.page-header-icon-with-cover {
+	margin-top: -0.72em;
+	margin-left: 0.07em;
+}
+
+.page-header-icon img {
+	border-radius: 3px;
+}
+
+.link-to-page {
+	margin: 1em 0;
+	padding: 0;
+	border: none;
+	font-weight: 500;
+}
+
+p > .user {
+	opacity: 0.5;
+}
+
+td > .user,
+td > time {
+	white-space: nowrap;
+}
+
+input[type="checkbox"] {
+	transform: scale(1.5);
+	margin-right: 0.6em;
+	vertical-align: middle;
+}
+
+p {
+	margin-top: 0.5em;
+	margin-bottom: 0.5em;
+}
+
+.image {
+	border: none;
+	margin: 1.5em 0;
+	padding: 0;
+	border-radius: 0;
+	text-align: center;
+}
+
+.code,
+code {
+	background: rgba(135, 131, 120, 0.15);
+	border-radius: 3px;
+	padding: 0.2em 0.4em;
+	border-radius: 3px;
+	font-size: 85%;
+	tab-size: 2;
+}
+
+code {
+	color: #eb5757;
+}
+
+.code {
+	padding: 1.5em 1em;
+}
+
+.code-wrap {
+	white-space: pre-wrap;
+	word-break: break-all;
+}
+
+.code > code {
+	background: none;
+	padding: 0;
+	font-size: 100%;
+	color: inherit;
+}
+
+blockquote {
+	font-size: 1em;
+	margin: 1em 0;
+	padding-left: 1em;
+	border-left: 3px solid rgb(55, 53, 47);
+}
+
+blockquote.quote-large {
+	font-size: 1.25em;
+}
+
+.bookmark {
+	text-decoration: none;
+	max-height: 8em;
+	padding: 0;
+	display: flex;
+	width: 100%;
+	align-items: stretch;
+}
+
+.bookmark-title {
+	font-size: 0.85em;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	height: 1.75em;
+	white-space: nowrap;
+}
+
+.bookmark-text {
+	display: flex;
+	flex-direction: column;
+}
+
+.bookmark-info {
+	flex: 4 1 180px;
+	padding: 12px 14px 14px;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+}
+
+.bookmark-image {
+	width: 33%;
+	flex: 1 1 180px;
+	display: block;
+	position: relative;
+	object-fit: cover;
+	border-radius: 1px;
+}
+
+.bookmark-description {
+	color: rgba(55, 53, 47, 0.6);
+	font-size: 0.75em;
+	overflow: hidden;
+	max-height: 4.5em;
+	word-break: break-word;
+}
+
+.bookmark-href {
+	font-size: 0.75em;
+	margin-top: 0.25em;
+}
+
+.sans { font-family: ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI Variable Display", "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol"; }
+.code { font-family: "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace; }
+.serif { font-family: Lyon-Text, Georgia, ui-serif, serif; }
+.mono { font-family: iawriter-mono, Nitti, Menlo, Courier, monospace; }
+.pdf .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI Variable Display", "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK JP'; }
+.pdf:lang(zh-CN) .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI Variable Display", "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK SC'; }
+.pdf:lang(zh-TW) .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI Variable Display", "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK TC'; }
+.pdf:lang(ko-KR) .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI Variable Display", "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK KR'; }
+.pdf .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK JP'; }
+.pdf:lang(zh-CN) .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK SC'; }
+.pdf:lang(zh-TW) .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK TC'; }
+.pdf:lang(ko-KR) .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK KR'; }
+.pdf .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK JP'; }
+.pdf:lang(zh-CN) .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK SC'; }
+.pdf:lang(zh-TW) .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK TC'; }
+.pdf:lang(ko-KR) .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK KR'; }
+.pdf .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK JP'; }
+.pdf:lang(zh-CN) .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK SC'; }
+.pdf:lang(zh-TW) .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK TC'; }
+.pdf:lang(ko-KR) .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK KR'; }
+.highlight-default {
+	color: rgba(50, 48, 44, 1);
+}
+.highlight-gray {
+	color: rgba(115, 114, 110, 1);
+	fill: rgba(115, 114, 110, 1);
+}
+.highlight-brown {
+	color: rgba(159, 107, 83, 1);
+	fill: rgba(159, 107, 83, 1);
+}
+.highlight-orange {
+	color: rgba(217, 115, 13, 1);
+	fill: rgba(217, 115, 13, 1);
+}
+.highlight-yellow {
+	color: rgba(203, 145, 47, 1);
+	fill: rgba(203, 145, 47, 1);
+}
+.highlight-teal {
+	color: rgba(68, 131, 97, 1);
+	fill: rgba(68, 131, 97, 1);
+}
+.highlight-blue {
+	color: rgba(51, 126, 169, 1);
+	fill: rgba(51, 126, 169, 1);
+}
+.highlight-purple {
+	color: rgba(144, 101, 176, 1);
+	fill: rgba(144, 101, 176, 1);
+}
+.highlight-pink {
+	color: rgba(193, 76, 138, 1);
+	fill: rgba(193, 76, 138, 1);
+}
+.highlight-red {
+	color: rgba(205, 60, 58, 1);
+	fill: rgba(205, 60, 58, 1);
+}
+.highlight-default_background {
+	color: rgba(50, 48, 44, 1);
+}
+.highlight-gray_background {
+	background: rgba(248, 248, 247, 1);
+}
+.highlight-brown_background {
+	background: rgba(244, 238, 238, 1);
+}
+.highlight-orange_background {
+	background: rgba(251, 236, 221, 1);
+}
+.highlight-yellow_background {
+	background: rgba(251, 243, 219, 1);
+}
+.highlight-teal_background {
+	background: rgba(237, 243, 236, 1);
+}
+.highlight-blue_background {
+	background: rgba(231, 243, 248, 1);
+}
+.highlight-purple_background {
+	background: rgba(248, 243, 252, 1);
+}
+.highlight-pink_background {
+	background: rgba(252, 241, 246, 1);
+}
+.highlight-red_background {
+	background: rgba(253, 235, 236, 1);
+}
+.block-color-default {
+	color: inherit;
+	fill: inherit;
+}
+.block-color-gray {
+	color: rgba(115, 114, 110, 1);
+	fill: rgba(115, 114, 110, 1);
+}
+.block-color-brown {
+	color: rgba(159, 107, 83, 1);
+	fill: rgba(159, 107, 83, 1);
+}
+.block-color-orange {
+	color: rgba(217, 115, 13, 1);
+	fill: rgba(217, 115, 13, 1);
+}
+.block-color-yellow {
+	color: rgba(203, 145, 47, 1);
+	fill: rgba(203, 145, 47, 1);
+}
+.block-color-teal {
+	color: rgba(68, 131, 97, 1);
+	fill: rgba(68, 131, 97, 1);
+}
+.block-color-blue {
+	color: rgba(51, 126, 169, 1);
+	fill: rgba(51, 126, 169, 1);
+}
+.block-color-purple {
+	color: rgba(144, 101, 176, 1);
+	fill: rgba(144, 101, 176, 1);
+}
+.block-color-pink {
+	color: rgba(193, 76, 138, 1);
+	fill: rgba(193, 76, 138, 1);
+}
+.block-color-red {
+	color: rgba(205, 60, 58, 1);
+	fill: rgba(205, 60, 58, 1);
+}
+.block-color-default_background {
+	color: inherit;
+	fill: inherit;
+}
+.block-color-gray_background {
+	background: rgba(248, 248, 247, 1);
+}
+.block-color-brown_background {
+	background: rgba(244, 238, 238, 1);
+}
+.block-color-orange_background {
+	background: rgba(251, 236, 221, 1);
+}
+.block-color-yellow_background {
+	background: rgba(251, 243, 219, 1);
+}
+.block-color-teal_background {
+	background: rgba(237, 243, 236, 1);
+}
+.block-color-blue_background {
+	background: rgba(231, 243, 248, 1);
+}
+.block-color-purple_background {
+	background: rgba(248, 243, 252, 1);
+}
+.block-color-pink_background {
+	background: rgba(252, 241, 246, 1);
+}
+.block-color-red_background {
+	background: rgba(253, 235, 236, 1);
+}
+.select-value-color-default { background-color: rgba(42, 28, 0, 0.07); }
+.select-value-color-gray { background-color: rgba(28, 19, 1, 0.11); }
+.select-value-color-brown { background-color: rgba(127, 51, 0, 0.156); }
+.select-value-color-orange { background-color: rgba(196, 88, 0, 0.203); }
+.select-value-color-yellow { background-color: rgba(209, 156, 0, 0.282); }
+.select-value-color-green { background-color: rgba(0, 96, 38, 0.156); }
+.select-value-color-blue { background-color: rgba(0, 99, 174, 0.172); }
+.select-value-color-purple { background-color: rgba(92, 0, 163, 0.141); }
+.select-value-color-pink { background-color: rgba(183, 0, 78, 0.152); }
+.select-value-color-red { background-color: rgba(206, 24, 0, 0.164); }
+
+.checkbox {
+	display: inline-flex;
+	vertical-align: text-bottom;
+	width: 16;
+	height: 16;
+	background-size: 16px;
+	margin-left: 2px;
+	margin-right: 5px;
+}
+
+.checkbox-on {
+	background-image: url("data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%2216%22%20height%3D%2216%22%20viewBox%3D%220%200%2016%2016%22%20fill%3D%22none%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%0A%3Crect%20width%3D%2216%22%20height%3D%2216%22%20fill%3D%22%2358A9D7%22%2F%3E%0A%3Cpath%20d%3D%22M6.71429%2012.2852L14%204.9995L12.7143%203.71436L6.71429%209.71378L3.28571%206.2831L2%207.57092L6.71429%2012.2852Z%22%20fill%3D%22white%22%2F%3E%0A%3C%2Fsvg%3E");
+}
+
+.checkbox-off {
+	background-image: url("data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%2216%22%20height%3D%2216%22%20viewBox%3D%220%200%2016%2016%22%20fill%3D%22none%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%0A%3Crect%20x%3D%220.75%22%20y%3D%220.75%22%20width%3D%2214.5%22%20height%3D%2214.5%22%20fill%3D%22white%22%20stroke%3D%22%2336352F%22%20stroke-width%3D%221.5%22%2F%3E%0A%3C%2Fsvg%3E");
+}
+	
+</style></head><body><article id="26501513-aee2-8058-aed4-cddbb14c8646" class="page sans"><header><h1 class="page-title">Images of the Russian Empire: Colorizing the Prokudin-Gorskii photo collection</h1><p class="page-description"></p></header><div class="page-body"><h3 id="26501513-aee2-8030-8247-d4e77bdc5cb8" class="">Ziteng (Ender) Ji</h3><p id="26501513-aee2-8083-ac87-d750857f7b50" class="">
+</p><h2 id="26501513-aee2-80b2-bd38-ef79e165e6d8" class="">Introduction </h2><p id="26501513-aee2-80c5-b0cd-d69a4d6b536f" class="">This project reconstructs color photographs from Sergei Prokudin-Gorskii’s digitized glass plates by splitting each plate into three grayscale channels (B, G, R) and aligning G and R to B using only x-y translations. We score candidate shifts with simple similarity metrics (e.g., L2/SSD or NCC) and report the chosen displacement vectors. To handle large, high-resolution scans efficiently, we accelerate alignment with a coarse to fine image pyramid. The result is a single, well-aligned RGB image with minimal visual artifacts.</p><h2 id="26501513-aee2-804a-aad8-d426b3e5348c" class="">Background:</h2><p id="26501513-aee2-802c-941e-f93b48834b20" class="">Sergei Mikhailovich Prokudin-Gorskii pioneered early color photography by capturing three sequential exposures of the same scene through blue, green, and red filters on a single glass plate. Decades later, the Library of Congress digitized these B-G-R plates, revealing remarkable views of the late Russian Empire but also exposing practical issues: the three channel images are vertically stacked, often misaligned, and can differ in intensity or contrast. Reconstructing a faithful color photo therefore requires separating the plate into its three grayscale channels and precisely aligning the green and red images to the blue reference using a translation model.</p><div id="26501513-aee2-8075-810e-e738e73e7298" class="column-list"><div id="26501513-aee2-801b-bd5c-edde74adbed1" style="width:25%" class="column"><figure id="26501513-aee2-8017-89cc-db07537c9a72" class="image" style="text-align:center"><a href="Images%20of%20the%20Russian%20Empire%20Colorizing%20the%20Prokud%2026501513aee28058aed4cddbb14c8646/church_rgb.png"><img style="width:120px" src="Images%20of%20the%20Russian%20Empire%20Colorizing%20the%20Prokud%2026501513aee28058aed4cddbb14c8646/church_rgb.png"/></a></figure></div><div id="26501513-aee2-803a-ae68-d267313c9cbd" style="width:33.33333333333333%" class="column"><p id="26601513-aee2-80ef-9cac-fa7902c1e861" class="">
+</p><p id="26601513-aee2-8032-8d2d-c98098c96ed7" class="">
+</p><p id="26501513-aee2-80aa-8dd2-f417c8af0cc6" class="">
+</p><figure id="26501513-aee2-8053-a312-cadca940152e" class="image"><a href="Images%20of%20the%20Russian%20Empire%20Colorizing%20the%20Prokud%2026501513aee28058aed4cddbb14c8646/arrow.jpg"><img style="width:1081px" src="Images%20of%20the%20Russian%20Empire%20Colorizing%20the%20Prokud%2026501513aee28058aed4cddbb14c8646/arrow.jpg"/></a></figure><p id="26601513-aee2-803c-8e65-eea74cd2e12c" class="">
+</p></div><div id="26501513-aee2-8098-9d96-d72713762968" style="width:41.666666666666686%" class="column"><figure id="26501513-aee2-80be-80e4-f58b5cc72ead" class="image"><a href="Images%20of%20the%20Russian%20Empire%20Colorizing%20the%20Prokud%2026501513aee28058aed4cddbb14c8646/church_colorized.jpg"><img style="width:480px" src="Images%20of%20the%20Russian%20Empire%20Colorizing%20the%20Prokud%2026501513aee28058aed4cddbb14c8646/church_colorized.jpg"/></a></figure></div></div><p id="26501513-aee2-80a2-9f71-ec2264357f90" class="">
+</p><h2 id="26501513-aee2-8008-8300-ea6bcdb64cae" class="">Methodology</h2><p id="26501513-aee2-80e9-865a-f3efce9bfacf" class="">I split each glass plate into three grayscale images B,G,R (top→bottom) and treat alignment as integer translations of G and R onto the base channel B. For any candidate shift <style>@import url('https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.16.9/katex.min.css')</style><span data-token-index="0" contenteditable="false" class="notion-text-equation-token" style="user-select:all;-webkit-user-select:all;-moz-user-select:all"><span></span><span><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mo stretchy="false">(</mo><mi mathvariant="normal">Δ</mi><mi>y</mi><mo separator="true">,</mo><mi mathvariant="normal">Δ</mi><mi>x</mi><mo stretchy="false">)</mo></mrow><annotation encoding="application/x-tex">(Δy,Δx)</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mopen">(</span><span class="mord">Δ</span><span class="mord mathnormal" style="margin-right:0.03588em;">y</span><span class="mpunct">,</span><span class="mspace" style="margin-right:0.1667em;"></span><span class="mord">Δ</span><span class="mord mathnormal">x</span><span class="mclose">)</span></span></span></span></span><span>﻿</span></span>, I compare only the valid overlap between the two images(no wraparound) then choose the shift that maximizes a similarity score.</p><p id="26501513-aee2-80fc-91fa-d92e75dc21d9" class="">Before scoring, each image is optionally converted to an edge map with a Sobel filter to suppress color differences, then standardized to zero-mean, unit-variance:<div class="indented"><h3 id="26701513-aee2-8075-a79b-e86d1fabd771" class="">                                                                                      <style>@import url('https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.16.9/katex.min.css')</style><span data-token-index="0" contenteditable="false" class="notion-text-equation-token" style="user-select:all;-webkit-user-select:all;-moz-user-select:all"><span></span><span><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mover accent="true"><mi>I</mi><mo>^</mo></mover><mo>=</mo><mfrac><mrow><mi mathvariant="normal">Sobel</mi><mo>⁡</mo><mo stretchy="false">(</mo><mi>I</mi><mo stretchy="false">)</mo><mo>−</mo><mi>μ</mi></mrow><mrow><mi>σ</mi><mo>+</mo><mi>ε</mi></mrow></mfrac></mrow><annotation encoding="application/x-tex">\hat{I}=\frac{\operatorname{Sobel}(I)-\mu}{\sigma+\varepsilon}</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.9468em;"></span><span class="mord accent"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.9468em;"><span style="top:-3em;"><span class="pstrut" style="height:3em;"></span><span class="mord mathnormal" style="margin-right:0.07847em;">I</span></span><span style="top:-3.2523em;"><span class="pstrut" style="height:3em;"></span><span class="accent-body" style="left:-0.1389em;"><span class="mord">^</span></span></span></span></span></span></span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2778em;"></span></span><span class="base"><span class="strut" style="height:1.4133em;vertical-align:-0.4033em;"></span><span class="mord"><span class="mopen nulldelimiter"></span><span class="mfrac"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:1.01em;"><span style="top:-2.655em;"><span class="pstrut" style="height:3em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mathnormal mtight" style="margin-right:0.03588em;">σ</span><span class="mbin mtight">+</span><span class="mord mathnormal mtight">ε</span></span></span></span><span style="top:-3.23em;"><span class="pstrut" style="height:3em;"></span><span class="frac-line" style="border-bottom-width:0.04em;"></span></span><span style="top:-3.485em;"><span class="pstrut" style="height:3em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mop mtight"><span class="mord mathrm mtight">Sobel</span></span><span class="mopen mtight">(</span><span class="mord mathnormal mtight" style="margin-right:0.07847em;">I</span><span class="mclose mtight">)</span><span class="mbin mtight">−</span><span class="mord mathnormal mtight">μ</span></span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.4033em;"><span></span></span></span></span></span><span class="mclose nulldelimiter"></span></span></span></span></span></span><span>﻿</span></span></h3></div></p><h3 id="26701513-aee2-8004-be1f-cac31eb26021" class="">Similarity Metric</h3><p id="26701513-aee2-8057-afc7-c3aeeec958fa" class="">I support SSD and NCC; both are maximized:<div class="indented"><h3 id="26701513-aee2-80e4-9512-f9af1919d0c1" class="">                                <style>@import url('https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.16.9/katex.min.css')</style><span data-token-index="0" contenteditable="false" class="notion-text-equation-token" style="user-select:all;-webkit-user-select:all;-moz-user-select:all"><span></span><span><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>S</mi><mtext>SSD</mtext></msub><mo stretchy="false">(</mo><mi>A</mi><mo separator="true">,</mo><mi>B</mi><mo stretchy="false">)</mo><mo>=</mo><mo>−</mo><msub><mo>∑</mo><mrow><mo stretchy="false">(</mo><mi>y</mi><mo separator="true">,</mo><mi>x</mi><mo stretchy="false">)</mo></mrow></msub><msup><mrow><mo fence="true">(</mo><mi>A</mi><mo stretchy="false">(</mo><mi>y</mi><mo separator="true">,</mo><mi>x</mi><mo stretchy="false">)</mo><mo>−</mo><mi>B</mi><mo stretchy="false">(</mo><mi>y</mi><mo separator="true">,</mo><mi>x</mi><mo stretchy="false">)</mo><mo fence="true">)</mo></mrow><mn>2</mn></msup><mo separator="true">,</mo><mspace width="2em"/><msub><mi>S</mi><mtext>NCC</mtext></msub><mo stretchy="false">(</mo><mi>A</mi><mo separator="true">,</mo><mi>B</mi><mo stretchy="false">)</mo><mo>=</mo><mfrac><mrow><mo>∑</mo><mi>A</mi><mo>⋅</mo><mi>B</mi></mrow><mrow><mi mathvariant="normal">∥</mi><mi>A</mi><msub><mi mathvariant="normal">∥</mi><mn>2</mn></msub><mi mathvariant="normal">∥</mi><mi>B</mi><msub><mi mathvariant="normal">∥</mi><mn>2</mn></msub></mrow></mfrac></mrow><annotation encoding="application/x-tex">S_{\text{SSD}}(A,B)=-\sum_{(y,x)}\left(A(y,x)-B(y,x)\right)^2,\qquad S_{\text{NCC}}(A,B)=\frac{\sum A\cdot B}{\|A\|_2 \|B\|_2}</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord"><span class="mord mathnormal" style="margin-right:0.05764em;">S</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.3283em;"><span style="top:-2.55em;margin-left:-0.0576em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord text mtight"><span class="mord mtight">SSD</span></span></span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span><span class="mopen">(</span><span class="mord mathnormal">A</span><span class="mpunct">,</span><span class="mspace" style="margin-right:0.1667em;"></span><span class="mord mathnormal" style="margin-right:0.05017em;">B</span><span class="mclose">)</span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2778em;"></span></span><span class="base"><span class="strut" style="height:1.4287em;vertical-align:-0.4747em;"></span><span class="mord">−</span><span class="mspace" style="margin-right:0.1667em;"></span><span class="mop"><span class="mop op-symbol small-op" style="position:relative;top:0em;">∑</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.2253em;"><span style="top:-2.4003em;margin-left:0em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mopen mtight">(</span><span class="mord mathnormal mtight" style="margin-right:0.03588em;">y</span><span class="mpunct mtight">,</span><span class="mord mathnormal mtight">x</span><span class="mclose mtight">)</span></span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.4747em;"><span></span></span></span></span></span></span><span class="mspace" style="margin-right:0.1667em;"></span><span class="minner"><span class="minner"><span class="mopen delimcenter" style="top:0em;">(</span><span class="mord mathnormal">A</span><span class="mopen">(</span><span class="mord mathnormal" style="margin-right:0.03588em;">y</span><span class="mpunct">,</span><span class="mspace" style="margin-right:0.1667em;"></span><span class="mord mathnormal">x</span><span class="mclose">)</span><span class="mspace" style="margin-right:0.2222em;"></span><span class="mbin">−</span><span class="mspace" style="margin-right:0.2222em;"></span><span class="mord mathnormal" style="margin-right:0.05017em;">B</span><span class="mopen">(</span><span class="mord mathnormal" style="margin-right:0.03588em;">y</span><span class="mpunct">,</span><span class="mspace" style="margin-right:0.1667em;"></span><span class="mord mathnormal">x</span><span class="mclose">)</span><span class="mclose delimcenter" style="top:0em;">)</span></span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.954em;"><span style="top:-3.2029em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight">2</span></span></span></span></span></span></span></span><span class="mspace" style="margin-right:0.1667em;"></span><span class="mpunct">,</span><span class="mspace" style="margin-right:2em;"></span><span class="mspace" style="margin-right:0.1667em;"></span><span class="mord"><span class="mord mathnormal" style="margin-right:0.05764em;">S</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.3283em;"><span style="top:-2.55em;margin-left:-0.0576em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord text mtight"><span class="mord mtight">NCC</span></span></span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span><span class="mopen">(</span><span class="mord mathnormal">A</span><span class="mpunct">,</span><span class="mspace" style="margin-right:0.1667em;"></span><span class="mord mathnormal" style="margin-right:0.05017em;">B</span><span class="mclose">)</span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2778em;"></span></span><span class="base"><span class="strut" style="height:1.53em;vertical-align:-0.52em;"></span><span class="mord"><span class="mopen nulldelimiter"></span><span class="mfrac"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:1.01em;"><span style="top:-2.655em;"><span class="pstrut" style="height:3em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mtight">∥</span><span class="mord mathnormal mtight">A</span><span class="mord mtight"><span class="mord mtight">∥</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.3173em;"><span style="top:-2.357em;margin-left:0em;margin-right:0.0714em;"><span class="pstrut" style="height:2.5em;"></span><span class="sizing reset-size3 size1 mtight"><span class="mord mtight">2</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.143em;"><span></span></span></span></span></span></span><span class="mord mtight">∥</span><span class="mord mathnormal mtight" style="margin-right:0.05017em;">B</span><span class="mord mtight"><span class="mord mtight">∥</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.3173em;"><span style="top:-2.357em;margin-left:0em;margin-right:0.0714em;"><span class="pstrut" style="height:2.5em;"></span><span class="sizing reset-size3 size1 mtight"><span class="mord mtight">2</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.143em;"><span></span></span></span></span></span></span></span></span></span><span style="top:-3.23em;"><span class="pstrut" style="height:3em;"></span><span class="frac-line" style="border-bottom-width:0.04em;"></span></span><span style="top:-3.485em;"><span class="pstrut" style="height:3em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mop op-symbol small-op mtight" style="position:relative;top:0em;">∑</span><span class="mspace mtight" style="margin-right:0.1952em;"></span><span class="mord mathnormal mtight">A</span><span class="mbin mtight">⋅</span><span class="mord mathnormal mtight" style="margin-right:0.05017em;">B</span></span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.52em;"><span></span></span></span></span></span><span class="mclose nulldelimiter"></span></span></span></span></span></span><span>﻿</span></span></h3></div></p><p id="26701513-aee2-80e6-9091-d4dc52f9dadc" class="">By default I use NCC on edges, which is insensitive to global brightness and works well when channel intensities differ.</p><h3 id="26701513-aee2-80f6-aaf4-e5da911cf2e7" class="">Single Scale Exhaustive Search </h3><p id="26701513-aee2-8032-a3cd-f191bb17014a" class="">Given a center <style>@import url('https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.16.9/katex.min.css')</style><span data-token-index="0" contenteditable="false" class="notion-text-equation-token" style="user-select:all;-webkit-user-select:all;-moz-user-select:all"><span></span><span><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mo stretchy="false">(</mo><msub><mi>c</mi><mi>y</mi></msub><mo separator="true">,</mo><msub><mi>c</mi><mi>x</mi></msub><mo stretchy="false">)</mo></mrow><annotation encoding="application/x-tex">(c_y  , c_x)</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1.0361em;vertical-align:-0.2861em;"></span><span class="mopen">(</span><span class="mord"><span class="mord mathnormal">c</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.1514em;"><span style="top:-2.55em;margin-left:0em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mathnormal mtight" style="margin-right:0.03588em;">y</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.2861em;"><span></span></span></span></span></span></span><span class="mpunct">,</span><span class="mspace" style="margin-right:0.1667em;"></span><span class="mord"><span class="mord mathnormal">c</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.1514em;"><span style="top:-2.55em;margin-left:0em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mathnormal mtight">x</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span><span class="mclose">)</span></span></span></span></span><span>﻿</span></span> and radius <style>@import url('https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.16.9/katex.min.css')</style><span data-token-index="0" contenteditable="false" class="notion-text-equation-token" style="user-select:all;-webkit-user-select:all;-moz-user-select:all"><span></span><span><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>r</mi></mrow><annotation encoding="application/x-tex">r</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.4306em;"></span><span class="mord mathnormal" style="margin-right:0.02778em;">r</span></span></span></span></span><span>﻿</span></span> (default <style>@import url('https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.16.9/katex.min.css')</style><span data-token-index="0" contenteditable="false" class="notion-text-equation-token" style="user-select:all;-webkit-user-select:all;-moz-user-select:all"><span></span><span><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>r</mi></mrow><annotation encoding="application/x-tex">r</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.4306em;"></span><span class="mord mathnormal" style="margin-right:0.02778em;">r</span></span></span></span></span><span>﻿</span></span> = 15), I evaluate all integer shifts <style>@import url('https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.16.9/katex.min.css')</style><span data-token-index="0" contenteditable="false" class="notion-text-equation-token" style="user-select:all;-webkit-user-select:all;-moz-user-select:all"><span></span><span><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mo stretchy="false">(</mo><mi mathvariant="normal">Δ</mi><mi>y</mi><mo separator="true">,</mo><mi mathvariant="normal">Δ</mi><mi>x</mi><mo stretchy="false">)</mo><mo>∈</mo><mo stretchy="false">[</mo><msub><mi>c</mi><mi>y</mi></msub><mo>±</mo><mi>r</mi><mo stretchy="false">]</mo><mo>×</mo><mo stretchy="false">[</mo><msub><mi>c</mi><mi>x</mi></msub><mo>±</mo><mi>r</mi><mo stretchy="false">]</mo></mrow><annotation encoding="application/x-tex">(Δy,Δx)∈[c_y ± r]×[c_x ± r]</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mopen">(</span><span class="mord">Δ</span><span class="mord mathnormal" style="margin-right:0.03588em;">y</span><span class="mpunct">,</span><span class="mspace" style="margin-right:0.1667em;"></span><span class="mord">Δ</span><span class="mord mathnormal">x</span><span class="mclose">)</span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">∈</span><span class="mspace" style="margin-right:0.2778em;"></span></span><span class="base"><span class="strut" style="height:1.0361em;vertical-align:-0.2861em;"></span><span class="mopen">[</span><span class="mord"><span class="mord mathnormal">c</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.1514em;"><span style="top:-2.55em;margin-left:0em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mathnormal mtight" style="margin-right:0.03588em;">y</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.2861em;"><span></span></span></span></span></span></span><span class="mspace" style="margin-right:0.2222em;"></span><span class="mbin">±</span><span class="mspace" style="margin-right:0.2222em;"></span></span><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord mathnormal" style="margin-right:0.02778em;">r</span><span class="mclose">]</span><span class="mspace" style="margin-right:0.2222em;"></span><span class="mbin">×</span><span class="mspace" style="margin-right:0.2222em;"></span></span><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mopen">[</span><span class="mord"><span class="mord mathnormal">c</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.1514em;"><span style="top:-2.55em;margin-left:0em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mathnormal mtight">x</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span><span class="mspace" style="margin-right:0.2222em;"></span><span class="mbin">±</span><span class="mspace" style="margin-right:0.2222em;"></span></span><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord mathnormal" style="margin-right:0.02778em;">r</span><span class="mclose">]</span></span></span></span></span><span>﻿</span></span>. For each candidate, I compute the valid overlapping slices, apply the interior crop, score with SSD/NCC, and keep the argmax. This yields <style>@import url('https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.16.9/katex.min.css')</style><span data-token-index="0" contenteditable="false" class="notion-text-equation-token" style="user-select:all;-webkit-user-select:all;-moz-user-select:all"><span></span><span><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mo stretchy="false">(</mo><mi mathvariant="normal">Δ</mi><msub><mi>y</mi><mi>G</mi></msub><mo separator="true">,</mo><mi mathvariant="normal">Δ</mi><msub><mi>x</mi><mi>G</mi></msub><mo stretchy="false">)</mo></mrow><annotation encoding="application/x-tex">(Δy_G  , Δx_G)</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mopen">(</span><span class="mord">Δ</span><span class="mord"><span class="mord mathnormal" style="margin-right:0.03588em;">y</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.3283em;"><span style="top:-2.55em;margin-left:-0.0359em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mathnormal mtight">G</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span><span class="mpunct">,</span><span class="mspace" style="margin-right:0.1667em;"></span><span class="mord">Δ</span><span class="mord"><span class="mord mathnormal">x</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.3283em;"><span style="top:-2.55em;margin-left:0em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mathnormal mtight">G</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span><span class="mclose">)</span></span></span></span></span><span>﻿</span></span> for <style>@import url('https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.16.9/katex.min.css')</style><span data-token-index="0" contenteditable="false" class="notion-text-equation-token" style="user-select:all;-webkit-user-select:all;-moz-user-select:all"><span></span><span><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>G</mi><mo>→</mo><mi>B</mi></mrow><annotation encoding="application/x-tex">G→B</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.6833em;"></span><span class="mord mathnormal">G</span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">→</span><span class="mspace" style="margin-right:0.2778em;"></span></span><span class="base"><span class="strut" style="height:0.6833em;"></span><span class="mord mathnormal" style="margin-right:0.05017em;">B</span></span></span></span></span><span>﻿</span></span> and <style>@import url('https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.16.9/katex.min.css')</style><span data-token-index="0" contenteditable="false" class="notion-text-equation-token" style="user-select:all;-webkit-user-select:all;-moz-user-select:all"><span></span><span><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mo stretchy="false">(</mo><mi mathvariant="normal">Δ</mi><msub><mi>y</mi><mi>R</mi></msub><mo separator="true">,</mo><mi mathvariant="normal">Δ</mi><msub><mi>x</mi><mi>R</mi></msub><mo stretchy="false">)</mo></mrow><annotation encoding="application/x-tex">(Δy_R , Δx_R)</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mopen">(</span><span class="mord">Δ</span><span class="mord"><span class="mord mathnormal" style="margin-right:0.03588em;">y</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.3283em;"><span style="top:-2.55em;margin-left:-0.0359em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mathnormal mtight" style="margin-right:0.00773em;">R</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span><span class="mpunct">,</span><span class="mspace" style="margin-right:0.1667em;"></span><span class="mord">Δ</span><span class="mord"><span class="mord mathnormal">x</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.3283em;"><span style="top:-2.55em;margin-left:0em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mathnormal mtight" style="margin-right:0.00773em;">R</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span><span class="mclose">)</span></span></span></span></span><span>﻿</span></span> for <style>@import url('https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.16.9/katex.min.css')</style><span data-token-index="0" contenteditable="false" class="notion-text-equation-token" style="user-select:all;-webkit-user-select:all;-moz-user-select:all"><span></span><span><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>R</mi><mo>→</mo><mi>B</mi></mrow><annotation encoding="application/x-tex">R→B</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.6833em;"></span><span class="mord mathnormal" style="margin-right:0.00773em;">R</span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">→</span><span class="mspace" style="margin-right:0.2778em;"></span></span><span class="base"><span class="strut" style="height:0.6833em;"></span><span class="mord mathnormal" style="margin-right:0.05017em;">B</span></span></span></span></span><span>﻿</span></span>.</p><h3 id="26701513-aee2-8037-869a-d30db12dff4f" class="">Coarse to Fine Pyramid</h3><p id="26701513-aee2-801a-963b-e734978a1177" class="">To handle large .tif scans efficiently, I build a Gaussian pyramid by repeatedly downscaling by <style>@import url('https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.16.9/katex.min.css')</style><span data-token-index="0" contenteditable="false" class="notion-text-equation-token" style="user-select:all;-webkit-user-select:all;-moz-user-select:all"><span></span><span><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mn>0.5</mn></mrow><annotation encoding="application/x-tex">0.5</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.6444em;"></span><span class="mord">0.5</span></span></span></span></span><span>﻿</span></span> (anti-aliased) until the minimum dimension is <style>@import url('https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.16.9/katex.min.css')</style><span data-token-index="0" contenteditable="false" class="notion-text-equation-token" style="user-select:all;-webkit-user-select:all;-moz-user-select:all"><span></span><span><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mo>≤</mo><mn>400</mn></mrow><annotation encoding="application/x-tex">≤ 400</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.7719em;vertical-align:-0.136em;"></span><span class="mrel">≤</span><span class="mspace" style="margin-right:0.2778em;"></span></span><span class="base"><span class="strut" style="height:0.6444em;"></span><span class="mord">400</span></span></span></span></span><span>﻿</span></span>. Starting from the coarsest level, I run the exhaustive search (wide radius at the coarsest, <style>@import url('https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.16.9/katex.min.css')</style><span data-token-index="0" contenteditable="false" class="notion-text-equation-token" style="user-select:all;-webkit-user-select:all;-moz-user-select:all"><span></span><span><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>r</mi><mi>a</mi><mi>d</mi><mi>i</mi><mi>u</mi><mi>s</mi><mo>=</mo><mn>4</mn></mrow><annotation encoding="application/x-tex">radius = 4</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.6944em;"></span><span class="mord mathnormal" style="margin-right:0.02778em;">r</span><span class="mord mathnormal">a</span><span class="mord mathnormal">d</span><span class="mord mathnormal">i</span><span class="mord mathnormal">u</span><span class="mord mathnormal">s</span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2778em;"></span></span><span class="base"><span class="strut" style="height:0.6444em;"></span><span class="mord">4</span></span></span></span></span><span>﻿</span></span> at finer levels) and propagate shifts upward by doubling the previous estimate to seed the next level. The final level returns the pixel-accurate integer shift.</p><h3 id="26701513-aee2-8081-970b-da5718768264" class="">Warping &amp; Composition</h3><p id="26701513-aee2-801a-ac7b-f45e907e4294" class="">I apply the estimated shifts with safe overlap (no wrapping) to obtain <style>@import url('https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.16.9/katex.min.css')</style><span data-token-index="0" contenteditable="false" class="notion-text-equation-token" style="user-select:all;-webkit-user-select:all;-moz-user-select:all"><span></span><span><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>G</mi><mtext>′</mtext><mo separator="true">,</mo><mi>R</mi><mtext>′</mtext></mrow><annotation encoding="application/x-tex">G ′, R ′</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.8778em;vertical-align:-0.1944em;"></span><span class="mord mathnormal">G</span><span class="mord">′</span><span class="mpunct">,</span><span class="mspace" style="margin-right:0.1667em;"></span><span class="mord mathnormal" style="margin-right:0.00773em;">R</span><span class="mord">′</span></span></span></span></span><span>﻿</span></span> , then stack into RGB as <style>@import url('https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.16.9/katex.min.css')</style><span data-token-index="0" contenteditable="false" class="notion-text-equation-token" style="user-select:all;-webkit-user-select:all;-moz-user-select:all"><span></span><span><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mo stretchy="false">[</mo><mi>R</mi><mtext>′</mtext><mo separator="true">,</mo><mi>G</mi><mtext>′</mtext><mo separator="true">,</mo><mi>B</mi><mo stretchy="false">]</mo></mrow><annotation encoding="application/x-tex">[R ′, G ′, B]</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mopen">[</span><span class="mord mathnormal" style="margin-right:0.00773em;">R</span><span class="mord">′</span><span class="mpunct">,</span><span class="mspace" style="margin-right:0.1667em;"></span><span class="mord mathnormal">G</span><span class="mord">′</span><span class="mpunct">,</span><span class="mspace" style="margin-right:0.1667em;"></span><span class="mord mathnormal" style="margin-right:0.05017em;">B</span><span class="mclose">]</span></span></span></span></span><span>﻿</span></span>. The result is clipped to <style>@import url('https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.16.9/katex.min.css')</style><span data-token-index="0" contenteditable="false" class="notion-text-equation-token" style="user-select:all;-webkit-user-select:all;-moz-user-select:all"><span></span><span><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mo stretchy="false">[</mo><mn>0</mn><mo separator="true">,</mo><mn>1</mn><mo stretchy="false">]</mo></mrow><annotation encoding="application/x-tex">[0, 1]</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mopen">[</span><span class="mord">0</span><span class="mpunct">,</span><span class="mspace" style="margin-right:0.1667em;"></span><span class="mord">1</span><span class="mclose">]</span></span></span></span></span><span>﻿</span></span> and saved as 8-bit (<mark class="highlight-teal"><code>img_as_ubyte</code></mark>) to avoid format issues.</p><h3 id="26701513-aee2-8098-b5d8-ccc5114191ca" class="">Conclusion: Why These Choices?</h3><p id="26701513-aee2-80c0-a30f-f96ff5adb5d4" class="">Edges + NCC increase robustness to channel-dependent brightness; interior cropping avoids border artifacts; integer translations match the assignment model; and the pyramid preserves accuracy while cutting the brute-force search cost by orders of magnitude.</p><p id="26701513-aee2-80eb-84b6-ff46f4522c6d" class="">
+</p><h2 id="26701513-aee2-8029-8119-dd67b7427a7d" class="">Result:</h2><p id="26701513-aee2-8009-9e04-dc799860f39d" class="">if you are using my codebase, please run <mark class="highlight-teal"><code>python proj1.py xxx.jpg</code></mark> or <mark class="highlight-teal"><code>python proj1.py xxx.tif</code></mark><mark class="highlight-teal"> </mark></p><p id="26701513-aee2-8073-9258-e40fea5e3f55" class="">
+</p><div id="26701513-aee2-8028-afd2-e62944a5e7df" class="column-list"><div id="26701513-aee2-8058-b834-d7a97f1177ef" style="width:33.333333333333336%" class="column"><figure id="26701513-aee2-8079-9a96-f6e8e6f2a64c" class="image"><a href="Images%20of%20the%20Russian%20Empire%20Colorizing%20the%20Prokud%2026501513aee28058aed4cddbb14c8646/cathedral_colorized.jpg"><img style="width:297.6484375px" src="Images%20of%20the%20Russian%20Empire%20Colorizing%20the%20Prokud%2026501513aee28058aed4cddbb14c8646/cathedral_colorized.jpg"/></a></figure><p id="26701513-aee2-8019-8b0a-f9eb020c18a8" class="">G:(2, 5), R:(3, 12)</p></div><div id="26701513-aee2-8085-8efa-d37e306d95e8" style="width:33.333333333333336%" class="column"><figure id="26701513-aee2-8052-8d05-d2079ca9767c" class="image"><a href="Images%20of%20the%20Russian%20Empire%20Colorizing%20the%20Prokud%2026501513aee28058aed4cddbb14c8646/monastery_colorized.jpg"><img style="width:297.65625px" src="Images%20of%20the%20Russian%20Empire%20Colorizing%20the%20Prokud%2026501513aee28058aed4cddbb14c8646/monastery_colorized.jpg"/></a></figure><p id="26701513-aee2-8005-af7a-dede4fd94d05" class=""> G:(2, -3), R:(2, 3)</p></div><div id="26701513-aee2-8087-89f4-ef8c0ae7f8ef" style="width:33.33333333333333%" class="column"><figure id="26701513-aee2-8030-9aa5-e539523e38c3" class="image"><a href="Images%20of%20the%20Russian%20Empire%20Colorizing%20the%20Prokud%2026501513aee28058aed4cddbb14c8646/tobolsk_colorized.jpg"><img style="width:297.65625px" src="Images%20of%20the%20Russian%20Empire%20Colorizing%20the%20Prokud%2026501513aee28058aed4cddbb14c8646/tobolsk_colorized.jpg"/></a></figure><p id="26701513-aee2-8025-bbd1-dfb33290ccff" class=""> G:(3, 3), R:(3, 6)</p></div></div><div id="26701513-aee2-802b-8ee3-f63085d8595b" class="column-list"><div id="26701513-aee2-80dd-a76f-dcbabaae0cbb" style="width:50%" class="column"><figure id="26701513-aee2-80bf-8cb8-d25da94d8099" class="image"><a href="Images%20of%20the%20Russian%20Empire%20Colorizing%20the%20Prokud%2026501513aee28058aed4cddbb14c8646/church_colorized%201.jpg"><img style="width:3634px" src="Images%20of%20the%20Russian%20Empire%20Colorizing%20the%20Prokud%2026501513aee28058aed4cddbb14c8646/church_colorized%201.jpg"/></a></figure><p id="26701513-aee2-801a-bf6a-cb5377d7eec2" class="">G:(4, 25), R:(-4, 58)</p></div><div id="26701513-aee2-80a5-b6fa-ef9693a54f83" style="width:50%" class="column"><figure id="26701513-aee2-8099-9ff7-e54325855777" class="image"><a href="Images%20of%20the%20Russian%20Empire%20Colorizing%20the%20Prokud%2026501513aee28058aed4cddbb14c8646/emir_colorized.jpg"><img style="width:480px" src="Images%20of%20the%20Russian%20Empire%20Colorizing%20the%20Prokud%2026501513aee28058aed4cddbb14c8646/emir_colorized.jpg"/></a></figure><p id="26701513-aee2-80d0-acaa-cbe858c7d037" class="">G:(24, 49), R:(40, 107)</p></div></div><div id="26701513-aee2-8080-9870-c30b6a6f019e" class="column-list"><div id="26701513-aee2-80a5-8394-df3881f392c5" style="width:50%" class="column"><figure id="26701513-aee2-802d-80e9-f9f79bdfe299" class="image"><a href="Images%20of%20the%20Russian%20Empire%20Colorizing%20the%20Prokud%2026501513aee28058aed4cddbb14c8646/harvesters_colorized.jpg"><img style="width:3683px" src="Images%20of%20the%20Russian%20Empire%20Colorizing%20the%20Prokud%2026501513aee28058aed4cddbb14c8646/harvesters_colorized.jpg"/></a></figure><p id="26701513-aee2-8043-9f12-f815a7cf1753" class="">G:(17, 60), R:(17, 124)</p></div><div id="26701513-aee2-8087-b59c-db1c95f26577" style="width:50%" class="column"><figure id="26701513-aee2-8039-acef-c11933da771f" class="image"><a href="Images%20of%20the%20Russian%20Empire%20Colorizing%20the%20Prokud%2026501513aee28058aed4cddbb14c8646/icon_colorized.jpg"><img style="width:3741px" src="Images%20of%20the%20Russian%20Empire%20Colorizing%20the%20Prokud%2026501513aee28058aed4cddbb14c8646/icon_colorized.jpg"/></a></figure><p id="26701513-aee2-8016-92a6-cdf0fad9b87d" class="">G:(17, 42), R:(23, 90)</p></div></div><div id="26701513-aee2-80f1-8686-e43e60738b39" class="column-list"><div id="26701513-aee2-80b8-a60f-c6ad866969bb" style="width:50%" class="column"><figure id="26701513-aee2-80e7-a412-fd87500f1f8e" class="image"><a href="Images%20of%20the%20Russian%20Empire%20Colorizing%20the%20Prokud%2026501513aee28058aed4cddbb14c8646/italil_colorized.jpg"><img style="width:3719px" src="Images%20of%20the%20Russian%20Empire%20Colorizing%20the%20Prokud%2026501513aee28058aed4cddbb14c8646/italil_colorized.jpg"/></a></figure><p id="26701513-aee2-8061-b55d-d3fa4f779103" class="">G:(22, 38), R:(36, 77)</p></div><div id="26701513-aee2-804b-9e95-d0ff4407744c" style="width:50%" class="column"><figure id="26701513-aee2-80cb-98f0-e762b4d8b595" class="image"><a href="Images%20of%20the%20Russian%20Empire%20Colorizing%20the%20Prokud%2026501513aee28058aed4cddbb14c8646/lastochikino_colorized.jpg"><img style="width:3700px" src="Images%20of%20the%20Russian%20Empire%20Colorizing%20the%20Prokud%2026501513aee28058aed4cddbb14c8646/lastochikino_colorized.jpg"/></a></figure><p id="26701513-aee2-801a-bbea-cf1e15496dd3" class="">G:(-2, -3), R:(-8, 76)</p></div></div><div id="26701513-aee2-8030-afad-e4e6ea12b6a4" class="column-list"><div id="26701513-aee2-80d9-ba4e-f8aeabfd85cf" style="width:50%" class="column"><figure id="26701513-aee2-80bb-b908-f38ce7cafffa" class="image"><a href="Images%20of%20the%20Russian%20Empire%20Colorizing%20the%20Prokud%2026501513aee28058aed4cddbb14c8646/lugano_colorized.jpg"><img style="width:3779px" src="Images%20of%20the%20Russian%20Empire%20Colorizing%20the%20Prokud%2026501513aee28058aed4cddbb14c8646/lugano_colorized.jpg"/></a></figure><p id="26701513-aee2-8017-bd7d-e702b1133b14" class="">G:(-17, 41), R:(-29, 92)</p></div><div id="26701513-aee2-80de-b4a9-dc383bce3147" style="width:50%" class="column"><figure id="26701513-aee2-809b-af97-dfde355bae20" class="image"><a href="Images%20of%20the%20Russian%20Empire%20Colorizing%20the%20Prokud%2026501513aee28058aed4cddbb14c8646/melons_colorized.jpg"><img style="width:3770px" src="Images%20of%20the%20Russian%20Empire%20Colorizing%20the%20Prokud%2026501513aee28058aed4cddbb14c8646/melons_colorized.jpg"/></a></figure><p id="26701513-aee2-8007-a61f-e88d3f1da1b7" class="">G:(10, 80), R:(13, 177)</p></div></div><div id="26701513-aee2-80df-a5a1-e45884513b8f" class="column-list"><div id="26701513-aee2-806b-bbf1-c830ad21f19a" style="width:50%" class="column"><figure id="26701513-aee2-80ee-ac53-c802044ccce1" class="image"><a href="Images%20of%20the%20Russian%20Empire%20Colorizing%20the%20Prokud%2026501513aee28058aed4cddbb14c8646/self_portrait_colorized.jpg"><img style="width:3810px" src="Images%20of%20the%20Russian%20Empire%20Colorizing%20the%20Prokud%2026501513aee28058aed4cddbb14c8646/self_portrait_colorized.jpg"/></a></figure><p id="26701513-aee2-8082-9844-c6f25ecd3d7d" class="">G:(29, 78), R:(37, 176)</p></div><div id="26701513-aee2-801e-908e-eed9c40f09df" style="width:50%" class="column"><figure id="26701513-aee2-804f-98ba-f4caf56fef07" class="image"><a href="Images%20of%20the%20Russian%20Empire%20Colorizing%20the%20Prokud%2026501513aee28058aed4cddbb14c8646/siren_colorized.jpg"><img style="width:3817px" src="Images%20of%20the%20Russian%20Empire%20Colorizing%20the%20Prokud%2026501513aee28058aed4cddbb14c8646/siren_colorized.jpg"/></a></figure><p id="26701513-aee2-807b-8776-f781292167a9" class="">G:(-6, 49), R: (-24, 96)</p></div></div><figure id="26701513-aee2-805c-a237-dc3982cb602a" class="image"><a href="Images%20of%20the%20Russian%20Empire%20Colorizing%20the%20Prokud%2026501513aee28058aed4cddbb14c8646/three_generations_colorized.jpg"><img style="width:432px" src="Images%20of%20the%20Russian%20Empire%20Colorizing%20the%20Prokud%2026501513aee28058aed4cddbb14c8646/three_generations_colorized.jpg"/></a></figure><p id="26701513-aee2-8010-9076-f77e89f37044" class="">                                                          G:(12, 54), R:(9, 111)</p><div id="26701513-aee2-8083-8ccf-ce74f55a66f2" class="column-list"><div id="26701513-aee2-8029-8915-ce2de396aa4c" style="width:50%" class="column"><figure id="26701513-aee2-8068-93e2-f193b405f7b4" class="image"><a href="Images%20of%20the%20Russian%20Empire%20Colorizing%20the%20Prokud%2026501513aee28058aed4cddbb14c8646/self_selected1_colorized.jpg"><img style="width:3749px" src="Images%20of%20the%20Russian%20Empire%20Colorizing%20the%20Prokud%2026501513aee28058aed4cddbb14c8646/self_selected1_colorized.jpg"/></a></figure><p id="26701513-aee2-80eb-a71b-ec79445a858d" class="">  G:(-8, 48), R:(-15, 111)</p></div><div id="26701513-aee2-80b1-9299-cbeb95ac1686" style="width:50%" class="column"><figure id="26701513-aee2-805c-b3c5-d947eca86c88" class="image"><a href="Images%20of%20the%20Russian%20Empire%20Colorizing%20the%20Prokud%2026501513aee28058aed4cddbb14c8646/self_selected2_colorized.jpg"><img style="width:3779px" src="Images%20of%20the%20Russian%20Empire%20Colorizing%20the%20Prokud%2026501513aee28058aed4cddbb14c8646/self_selected2_colorized.jpg"/></a></figure><p id="26701513-aee2-80dc-acbb-d40e39a68747" class=""> G:(-17, 41), R:(-29, 92)</p></div></div><div id="26701513-aee2-808b-9760-c22677fcd266" class="column-list"><div id="26701513-aee2-80d3-ba96-d4b7a98faf6b" style="width:50%" class="column"><figure id="26701513-aee2-8093-b78a-d081be2f11a6" class="image"><a href="Images%20of%20the%20Russian%20Empire%20Colorizing%20the%20Prokud%2026501513aee28058aed4cddbb14c8646/self_selected3_colorized.jpg"><img style="width:3759px" src="Images%20of%20the%20Russian%20Empire%20Colorizing%20the%20Prokud%2026501513aee28058aed4cddbb14c8646/self_selected3_colorized.jpg"/></a></figure><p id="26701513-aee2-8016-8b8d-e58215236f74" class="">  G:(-16, 33), R:(-25, 78)</p></div><div id="26701513-aee2-809e-a319-e71cd529c148" style="width:50%" class="column"><figure id="26701513-aee2-8001-a06d-eb794b29cd32" class="image"><a href="Images%20of%20the%20Russian%20Empire%20Colorizing%20the%20Prokud%2026501513aee28058aed4cddbb14c8646/self_selected4_colorized.jpg"><img style="width:3738px" src="Images%20of%20the%20Russian%20Empire%20Colorizing%20the%20Prokud%2026501513aee28058aed4cddbb14c8646/self_selected4_colorized.jpg"/></a></figure><p id="26701513-aee2-801e-95c8-c6da32ddcccf" class=""> G:(-12, 24), R:(-22, 96)</p></div></div><h2 id="26701513-aee2-801b-ae8d-dec8a7a554a5" class="">Problems Encountered</h2><p id="26701513-aee2-8027-a9ba-ef7960e894ef" class="">A recurring challenge was ambiguous alignment in low-texture regions. On plates with large sky/water areas or smooth façades, many candidate shifts produce nearly identical scores, and raw pixel SSD often snaps to a wrong local maximum; border artifacts further confuse the match. I mitigated this by (i) computing scores on Sobel edges with zero-mean/unit-variance normalization to emphasize structure and suppress brightness differences, (ii) discarding a fixed 10% interior crop to remove noisy borders, and (iii) using a coarse-to-fine pyramid so fine-level search starts near the correct basin. These steps eliminated most gross failures, though in extremely textureless scenes a small ±1 pixel residual can remain.</p></div></article><span class="sans" style="font-size:14px;padding-top:2em"></span></body></html>
